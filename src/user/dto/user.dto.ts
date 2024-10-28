@@ -3,30 +3,30 @@ import { IsUUID, IsNotEmpty, IsString, IsEmail, MinLength, MaxLength } from "cla
 export class UserDto {
     @IsNotEmpty()
     @IsUUID()
-    id: string;
+    public id: string;
 
     @IsString()
     @IsNotEmpty()
-    typeDocument: string;
+    public typeDocument: string;
 
     @IsNotEmpty()
     @IsString()
     @MinLength(8)
     @MaxLength(10)
-    numberDocument: string;
+    public numberDocument: string;
 
     @IsNotEmpty()
     @IsString()
-    fullName: string;
+    public fullName: string;
 
     @IsNotEmpty()
     @IsString()
     @IsEmail()
-    email: string;
+    public email: string;
 
     @IsNotEmpty()
     @IsString()
     @MinLength(8)
     @MaxLength(10)
-    phoneNumber: string;
+    public phoneNumber: string;
 }
